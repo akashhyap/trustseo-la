@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://p.typekit.net/p.css?s=1&k=lue6wew&ht=tk&f=25163&a=14350217&app=typekit&e=css");
+
+@font-face {
+    font-family: "fatfrank";
+    src: url("https://use.typekit.net/af/2aa411/00000000000000007735a612/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/2aa411/00000000000000007735a612/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/2aa411/00000000000000007735a612/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+:root {
+    --font-heading-scale: 0.9090909090909091;
+    --primary-bg-color: #f0f2f3;
+    --primary-text-color: #676767;
+    --danger-color: #ad0505;
+    --success-color: #4CAF50;
+}
+
+html {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 16px;
+    overflow-x: hidden
+}
+
+.content p {
+    @apply mb-5;
+}
+
+.content h1 {
+    @apply text-4xl mb-5 mt-3 font-bold;
+}
+
+.content h2 {
+    @apply text-3xl mb-5 mt-3 font-bold;
+}
+
+.content h3 {
+    @apply text-2xl mb-5 mt-6 font-bold;
+}
+
+.table-content table {
+    @apply w-full
+}
+
+.table-content table th,
+.table-content table td {
+    @apply p-3
+}
+
+.table-content table thead {
+    @apply bg-slate-200
+}
+
+.table-content table tbody tr:nth-child(even) {
+    @apply bg-gray-100
+}
+
+.navigation li {
+    @apply text-gray-900 font-medium
+}
+
+.imageTextSplit {
+    @apply lg:flex lg:items-center lg:space-x-10 py-12;
+}
+
+.imageTextSplit .figure,
+.imageTextSplit .content {
+    @apply basis-1/2
+}
+
+.homeHero {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    /* @apply -mx-[100%]  */
+}
+
+.homeHeroWrapper {
+    @apply max-w-6xl mx-auto lg:flex lg:items-center lg:space-x-10 pl-4
+}
+
+.homeHeroWrapper .figure {
+    @apply self-end mb-0
+}
+
+.homeHeroWrapper .figure,
+.homeHeroWrapper .table-content {
+    @apply basis-1/2
+}
+
+@-webkit-keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.splash {
+    margin-bottom: 0;
+}
+
+h1 *,
+h2 * {
+    font-family: "fatfrank";
+    font-size: 100%;
+    /* font-weight: 700; */
+}
+
+h1.splash,
+h2.splash-h2 {
+
+    color: #FFFFFF;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+@media screen and (min-width:1300px) {
+
+    h1.splash,
+    h2.splash-h2 {
+        line-height: 1.08;
+    }
+}
+
+h1 .your,
+h1 .local {
+    font-size: calc(var(--font-heading-scale) * 3rem);
+}
+
+h1 .local {
+    text-decoration-line: underline;
+    text-decoration-color: #fcd832;
+}
+
+h1 .las-vegas {
+    font-size: calc(var(--font-heading-scale) * 3.4rem);
+}
+
+h1 .seo-experts {
+    font-size: calc(var(--font-heading-scale) * 2.75rem);
+    text-decoration-line: underline;
+    text-decoration-color: #fcd832;
+}
+
+h2 .we-help-you {
+    font-size: calc(var(--font-heading-scale) * 2.65rem);
+}
+
+h2 .rank-no-1 {
+    font-size: calc(var(--font-heading-scale) * 3.2rem);
+}
+
+@media screen and (min-width:1366px) {
+
+    h1 .your,
+    h1 .local {
+        font-size: calc(var(--font-heading-scale) * 4rem);
+    }
+
+    h1 .local {
+        text-decoration-line: underline;
+        text-decoration-color: #fcd832;
+    }
+
+    h1 .las-vegas {
+        font-size: calc(var(--font-heading-scale) * 4.6rem);
+    }
+
+    h1 .seo-experts {
+        font-size: calc(var(--font-heading-scale) * 3.74rem);
+    }
+
+    h2 .we-help-you {
+        font-size: calc(var(--font-heading-scale) * 3.55rem);
+    }
+
+    h2 .rank-no-1 {
+        font-size: calc(var(--font-heading-scale) * 4.3rem);
+    }
+}
+
+.amber {
+    @apply bg-amber-400
+}
+.white {
+    @apply bg-white
+}
+.red {
+    @apply bg-red-700
+}
+.left-text {
+    @apply text-left;
+}
+.right-text {
+    @apply text-right;
+}
+.center-text {
+    @apply text-center;
+}
+.highlightSectionWapper{
+    @apply max-w-6xl mx-auto py-12 px-5 lg:px-0;
+ }
+.highlightSectionWapper img{
+   @apply mx-auto;
+}
+.highlightSectionWapper h2{
+   @apply text-4xl mb-6;
+}
