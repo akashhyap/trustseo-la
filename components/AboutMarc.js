@@ -5,7 +5,7 @@ import BannerImage from "./BannerImage";
 const AboutMarc = ({blok}) => {
   // console.log(blok);
   return (
-    <div className="aboutMarc bg-[#fbfcfd] border border-[#f2f2f2]" {...storyblokEditable(blok)}>
+    <div className="aboutMarc bg-[#fbfcfd] border border-[#f2f2f2] mb-[60px]" {...storyblokEditable(blok)}>
       <div className="relative h-[257px]">
         <BannerImage blok={blok} />
       </div>
