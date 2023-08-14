@@ -14,12 +14,12 @@ const Blog = ({ blok }) => {
             <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
           ))}
         <h1 className="text-4xl tracking-tight font-semibold mb-10">
-          {blok.title}
+          {blok?.title}
         </h1>
         <div className="relative h-[415px] mb-10">
           <BannerImage blok={blok} />
         </div>
-        {blok.body.map((nestedBlok) => (
+        {blok?.body.map((nestedBlok) => (
           <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
         ))}
       </article>
