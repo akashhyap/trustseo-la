@@ -16,6 +16,11 @@ import HomeHero from "./HomeHero";
 import HightlightSection from "./HightlightSection";
 import ColumnSection from "./ColumnSection";
 import ColumnContent from "./ColumnContent";
+import BlogAlertContent from "./BlogAlertContent";
+import NoticeBoardContent from "./NoticeBoardContent";
+import NoticeBoard from "./NoticeBoard";
+import AboutMarc from "./AboutMarc";
+import StickyContent from "./StickyContent";
 import Image from "./Image";
 import Button from "./Button";
 
@@ -36,6 +41,11 @@ storyblokInit({
     hightlightSection: HightlightSection,
     columnSection: ColumnSection,
     columnContent: ColumnContent,
+    blogAlertContent: BlogAlertContent,
+    aboutMarc: AboutMarc,
+    noticeBoard: NoticeBoard,
+    noticeBoardContent: NoticeBoardContent,
+    stickyContent: StickyContent,
     headingOne: HeadingOne,
     image: Image,
     button: Button,
