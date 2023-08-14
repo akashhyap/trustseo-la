@@ -24,10 +24,10 @@ const Blog = ({ blok }) => {
         ))}
       </article>
       <aside>
-      {blok.aside.map((nestedBlok) => (
-        <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
-      ))}
-       {/* <div className="bg-slate-600 sticky top-10">
+        {blok?.aside.map((nestedBlok) => (
+          <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+        ))}
+        {/* <div className="bg-slate-600 sticky top-10">
          content
        </div> */}
       </aside>
