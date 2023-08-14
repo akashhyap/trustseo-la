@@ -21,7 +21,7 @@ import Button from "./Button";
 
 /** 3. Initialize it as usual */
 storyblokInit({
-  accessToken: process.env.STORYBLOK_API_TOKEN,
+  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,
   use: [apiPlugin],
   components: {
     teaser: Teaser,
