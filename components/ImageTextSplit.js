@@ -5,7 +5,7 @@ const ImageTextSplit = ({ blok }) => {
 
   return (
     <div
-      className={`imageTextSplit ${blok.fix_width ? "max-w-6xl mx-auto" : ""}`}
+      className={`imageTextSplit ${blok.fix_width ? "max-w-6xl mx-auto" : ""} ${blok.reverse ? "imageTextSplitReverse" : ""}`}
       {...storyblokEditable(blok)}
     >
       {blok.body.map((nestedBlok) => (

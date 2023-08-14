@@ -72,6 +72,9 @@ html {
 .imageTextSplit .content {
     @apply basis-1/2
 }
+.imageTextSplitReverse .figure {
+    @apply lg:order-2
+}
 
 .homeHero {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -86,7 +89,7 @@ html {
 }
 
 .homeHeroWrapper .figure {
-    @apply self-end mb-0
+    @apply hidden md:block self-end mb-0
 }
 
 .homeHeroWrapper .figure,
@@ -126,15 +129,15 @@ html {
     margin-bottom: 0;
 }
 
-h1 *,
-h2 * {
+.table-content h1 *,
+.table-content h2 * {
     font-family: "fatfrank";
     font-size: 100%;
     /* font-weight: 700; */
 }
 
-h1.splash,
-h2.splash-h2 {
+.table-content h1.splash,
+.table-content h2.splash-h2 {
 
     color: #FFFFFF;
     text-transform: uppercase;
@@ -143,8 +146,8 @@ h2.splash-h2 {
 
 @media screen and (min-width:1300px) {
 
-    h1.splash,
-    h2.splash-h2 {
+    .table-content h1.splash,
+    .table-content h2.splash-h2 {
         line-height: 1.08;
     }
 }
@@ -232,4 +235,10 @@ h2 .rank-no-1 {
 }
 .highlightSectionWapper h2{
    @apply text-4xl mb-6;
+}
+.columnSection .columnContent h2, .columnSection .columnContent h3 {
+    @apply my-5 text-xl font-semibold leading-7 tracking-tight text-gray-900 group-hover:text-gray-600;
+}
+.columnSection p {
+    @apply tracking-wider pb-3
 }

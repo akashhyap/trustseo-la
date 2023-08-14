@@ -2,7 +2,6 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 import Link from "next/link";
 
 const Button = ({ blok }) => {
-  console.log(blok);
   return (
     <div className="mt-5">
       <Link

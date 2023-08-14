@@ -14,6 +14,8 @@ import Table from "./Table";
 import ImageTextSplit from "./ImageTextSplit";
 import HomeHero from "./HomeHero";
 import HightlightSection from "./HightlightSection";
+import ColumnSection from "./ColumnSection";
+import ColumnContent from "./ColumnContent";
 import Image from "./Image";
 import Button from "./Button";
 
@@ -32,6 +34,8 @@ storyblokInit({
     imageTextSplit: ImageTextSplit,
     homeHero: HomeHero,
     hightlightSection: HightlightSection,
+    columnSection: ColumnSection,
+    columnContent: ColumnContent,
     headingOne: HeadingOne,
     image: Image,
     button: Button,
