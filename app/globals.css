@@ -338,3 +338,9 @@ h2 .rank-no-1 {
     max-width: none;
     width: 80px;
 }
+.cta {
+    @apply h-[50px] px-[30px] bg-[#f16232] border border-[#f16232] min-w-[130px] text-white text-sm uppercase font-bold;
+}
+.cta:hover {
+    @apply bg-white text-[#f16232];
+}

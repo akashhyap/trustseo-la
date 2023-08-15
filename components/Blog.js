@@ -4,7 +4,7 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 import BannerImage from "./BannerImage";
 
 const Blog = ({ blok }) => {
-  console.log("blok", blok);
+  // console.log("blok", blok);
 
   const blogAlert = blok.body.filter(
     (item) => item.component === "blogAlertContent"
