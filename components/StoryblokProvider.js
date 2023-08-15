@@ -7,6 +7,7 @@ import Page from "./Page";
 import Teaser from "./Teaser";
 import Grid from "./Grid";
 import Feature from "./Feature";
+import OnPageSeo from "./OnPageSeo";
 import HeadingOne from "./HeadingOne";
 import Blog from "./Blog";
 import Content from "./Content";
@@ -34,6 +35,7 @@ storyblokInit({
     page: Page,
     grid: Grid,
     feature: Feature,
+    onPageSeo: OnPageSeo,
     blog: Blog,
     content: Content,
     table: Table,

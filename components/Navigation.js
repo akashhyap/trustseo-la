@@ -16,6 +16,9 @@ const Navigation = () => {
             Online reputation management
           </Link>
         </li>
+        <li>
+          <Link href="/on-page-seo">On Page Seo</Link>
+        </li>
       </ul>
     </div>
   );

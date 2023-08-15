@@ -15,7 +15,7 @@ export default async function Page({ params }) {
   return (
     <>
       {story.content.component === "page" ? (
-        <main className="max-w-5xl mx-auto">
+        <main className="max-w-6xl mx-auto">
          <StoryComponent blok={story.content} />
         </main>
       ) : (
