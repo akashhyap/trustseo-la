@@ -16,6 +16,7 @@ import HomeHero from "./HomeHero";
 import HightlightSection from "./HightlightSection";
 import ColumnSection from "./ColumnSection";
 import ColumnContent from "./ColumnContent";
+import Aside from "./Aside";
 import BlogAlertContent from "./BlogAlertContent";
 import NoticeBoardContent from "./NoticeBoardContent";
 import NoticeBoard from "./NoticeBoard";
@@ -41,6 +42,7 @@ storyblokInit({
     hightlightSection: HightlightSection,
     columnSection: ColumnSection,
     columnContent: ColumnContent,
+    aside: Aside,
     blogAlertContent: BlogAlertContent,
     aboutMarc: AboutMarc,
     noticeBoard: NoticeBoard,
