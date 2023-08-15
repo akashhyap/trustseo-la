@@ -8,9 +8,9 @@ const Navigation = () => {
         <li>
           <Link href="/">Home</Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/online-visibility">Online visibility</Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/online-reputation-management">
             Online reputation management
