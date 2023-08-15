@@ -24,7 +24,7 @@ const Blog = ({ blok }) => {
         ))}
       </article>
       <aside>
-        {blok?.aside?.map((nestedBlok) => (
+        {blok?.aside && blok?.aside?.map((nestedBlok) => (
           <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
         ))}
       </aside>
