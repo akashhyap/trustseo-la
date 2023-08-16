@@ -48,7 +48,7 @@ const Navigation = ({config}) => {
           </div>
           <nav className="hidden md:flex space-x-10">
             {config?.content?.headerMenu?.map((nestedBlok) => (
-              <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+              <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} closeMenu={() => setMenuOpen(false)}/>
             ))}
           </nav>
         </div>
@@ -122,7 +122,7 @@ const Navigation = ({config}) => {
             </div>
             <div className="px-4 pt-2 pb-3 mt-5 sm:px-3 flex flex-col">
               {config?.content?.headerMenu?.map((nestedBlok) => (
-                <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+                <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} closeMenu={() => setMenuOpen(false)} />
               ))}
             </div>
           </div>

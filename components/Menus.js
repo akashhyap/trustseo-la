@@ -3,8 +3,9 @@ import Link from "next/link";
 import { Menu, Popover, Transition } from "@headlessui/react";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
-const Menus = ({ blok }) => {
+const Menus = ({ blok, closeMenu }) => {
   const hasSubMenu = blok?.submenus?.length != 0;
+
   return (
     <>
       {hasSubMenu ? (
@@ -55,7 +56,13 @@ const Menus = ({ blok }) => {
               <>
                 <Popover.Button className="flex justify-between items-center w-full py-2 text-lg mt-2 md:mt-0 font-medium text-gray-800 hover:text-gray-500">
                   {blok.title}
-                  <span>{open ? <IoMdArrowDropup className="text-lg" /> : <IoMdArrowDropdown className="text-lg" />}</span>
+                  <span>
+                    {open ? (
+                      <IoMdArrowDropup className="text-lg" />
+                    ) : (
+                      <IoMdArrowDropdown className="text-lg" />
+                    )}
+                  </span>
                 </Popover.Button>
                 <Transition
                   show={open}
@@ -70,19 +77,16 @@ const Menus = ({ blok }) => {
                     static
                     className="flex flex-col mb-2 bg-slate-100 pl-3 pt-3 rounded-sm"
                   >
-                    {blok?.submenus.map((subItem) => {
-                      console.log(subItem);
-                      return (
-                        <Link
-                          key={subItem._uid}
-                          href={`/${subItem.link.cached_url}`}
-                          className="text-lg md:text-base mb-2 md:mb-0 font-medium text-gray-800 hover:text-gray-500"
-                          onClick={() => setMenuOpen(false)}
-                        >
-                          {subItem.text}
-                        </Link>
-                      )
-                    })}
+                    {blok?.submenus.map((subItem) => (
+                      <Link
+                        key={subItem._uid}
+                        href={`/${subItem.link.cached_url}`}
+                        className="text-lg md:text-base mb-2 md:mb-0 font-medium text-gray-800 hover:text-gray-500"
+                        onClick={closeMenu}
+                      >
+                        {subItem.text}
+                      </Link>
+                    ))}
                   </Popover.Panel>
                 </Transition>
               </>
@@ -93,6 +97,7 @@ const Menus = ({ blok }) => {
         <Link
           href={`/${blok.link.cached_url}`}
           className="text-lg md:text-base mb-4 md:mb-0 font-medium text-gray-800 hover:text-gray-500"
+          onClick={closeMenu}
         >
           {blok.title}
         </Link>
