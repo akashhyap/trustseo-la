@@ -70,16 +70,19 @@ const Menus = ({ blok }) => {
                     static
                     className="flex flex-col mb-2 bg-slate-100 pl-3 pt-3 rounded-sm"
                   >
-                    {blok?.submenus.map((subItem) => (
-                      <Link
-                        key={subItem._uid}
-                        href={`/${subItem.link.cached_url}`}
-                        className="text-lg md:text-base mb-2 md:mb-0 font-medium text-gray-800 hover:text-gray-500"
-                        onClick={() => setMenuOpen(false)}
-                      >
-                        {subItem.text}
-                      </Link>
-                    ))}
+                    {blok?.submenus.map((subItem) => {
+                      console.log(subItem);
+                      return (
+                        <Link
+                          key={subItem._uid}
+                          href={`/${subItem.link.cached_url}`}
+                          className="text-lg md:text-base mb-2 md:mb-0 font-medium text-gray-800 hover:text-gray-500"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {subItem.text}
+                        </Link>
+                      )
+                    })}
                   </Popover.Panel>
                 </Transition>
               </>

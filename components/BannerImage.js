@@ -1,7 +1,7 @@
 import React from "react";
 
 const BannerImage = ({ blok }) => {
-  console.log("blok image", blok);
+  // console.log("blok image", blok);
   return (
     <>
       {blok?.image?.filename && (

@@ -81,7 +81,7 @@ const Navigation = ({config}) => {
         leaveTo="-translate-x-full"
         as={Fragment}
       >
-        <div className="fixed top-0 left-0 w-8/12 h-screen bg-white overflow-y-auto z-50 shadow-lg">
+        <div className="fixed top-0 left-0 w-10/12 h-screen bg-white overflow-y-auto z-50 shadow-lg">
           <div className="overflow-hidden">
             <div className="px-5 pt-4 flex items-center justify-between">
               <div>
