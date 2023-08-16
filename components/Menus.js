@@ -73,7 +73,7 @@ const Menus = ({ blok }) => {
                     {blok?.submenus.map((subItem) => (
                       <Link
                         key={subItem._uid}
-                        href="/"
+                        href={`/${subItem.link.cached_url}`}
                         className="text-lg md:text-base mb-2 md:mb-0 font-medium text-gray-800 hover:text-gray-500"
                         onClick={() => setMenuOpen(false)}
                       >
