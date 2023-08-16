@@ -86,16 +86,16 @@ html {
 }
 
 .homeHeroWrapper {
-    @apply max-w-6xl mx-auto lg:flex lg:items-center lg:space-x-10 pl-4
+    @apply max-w-6xl mx-auto md:flex md:items-center md:space-x-10 px-16 py-5 xl:px-0 lg:pb-0
 }
 
 .homeHeroWrapper .figure {
-    @apply hidden md:block self-end mb-0
+    @apply hidden lg:block self-end mb-0
 }
 
 .homeHeroWrapper .figure,
 .homeHeroWrapper .table-content {
-    @apply basis-1/2
+    @apply lg:basis-1/2 text-center lg:text-left mx-auto
 }
 
 @-webkit-keyframes gradientBG {
@@ -155,7 +155,7 @@ html {
 
 h1 .your,
 h1 .local {
-    font-size: calc(var(--font-heading-scale) * 3rem);
+    font-size: calc(var(--font-heading-scale) * 5rem);
 }
 
 h1 .local {
@@ -164,28 +164,28 @@ h1 .local {
 }
 
 h1 .las-vegas {
-    font-size: calc(var(--font-heading-scale) * 3.4rem);
+    font-size: calc(var(--font-heading-scale) * 5.7rem);
 }
 
 h1 .seo-experts {
-    font-size: calc(var(--font-heading-scale) * 2.75rem);
+    font-size: calc(var(--font-heading-scale) * 4.65rem);
     text-decoration-line: underline;
     text-decoration-color: #fcd832;
 }
 
 h2 .we-help-you {
-    font-size: calc(var(--font-heading-scale) * 2.65rem);
+    font-size: calc(var(--font-heading-scale) * 4.45rem);
 }
 
 h2 .rank-no-1 {
-    font-size: calc(var(--font-heading-scale) * 3.2rem);
+    font-size: calc(var(--font-heading-scale) * 5.35rem);
 }
 
 @media screen and (min-width:1366px) {
 
     h1 .your,
     h1 .local {
-        font-size: calc(var(--font-heading-scale) * 4rem);
+        font-size: calc(var(--font-heading-scale) * 6rem);
     }
 
     h1 .local {
@@ -194,19 +194,19 @@ h2 .rank-no-1 {
     }
 
     h1 .las-vegas {
-        font-size: calc(var(--font-heading-scale) * 4.6rem);
+        font-size: calc(var(--font-heading-scale) * 6.9rem);
     }
 
     h1 .seo-experts {
-        font-size: calc(var(--font-heading-scale) * 3.74rem);
+        font-size: calc(var(--font-heading-scale) * 5.57rem);
     }
 
     h2 .we-help-you {
-        font-size: calc(var(--font-heading-scale) * 3.55rem);
+        font-size: calc(var(--font-heading-scale) * 5.25rem);
     }
 
     h2 .rank-no-1 {
-        font-size: calc(var(--font-heading-scale) * 4.3rem);
+        font-size: calc(var(--font-heading-scale) * 6.35rem);
     }
 }
 
@@ -235,7 +235,7 @@ h2 .rank-no-1 {
 }
 
 .highlightSectionWapper {
-    @apply max-w-6xl mx-auto py-12 px-5 lg:px-0;
+    @apply max-w-6xl mx-auto py-12 px-10 xl:px-5 lg:px-0;
 }
 
 .highlightSectionWapper img {

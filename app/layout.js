@@ -3,6 +3,7 @@ import StoryblokProvider from "@/components/StoryblokProvider";
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Config from "@/components/Config";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
     <StoryblokProvider>
       <html lang="en" className={`${montserrat.variable}`}>
         <body>
-          <Header/> 
+          <Config/> 
           <main className="">{children}</main>
         </body>
       </html>

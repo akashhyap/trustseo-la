@@ -4,7 +4,7 @@ import Navigation from './Navigation'
 
 const Header = () => {
   return (
-    <div className='px-5'>
+    <div className=''>
       <Navigation />
     </div>
   )
