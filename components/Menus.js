@@ -53,7 +53,7 @@ const Menus = ({ blok }) => {
           <Popover key={blok._uid} className="mt-4 md:hidden">
             {({ open }) => (
               <>
-                <Popover.Button className="flex justify-between w-full py-2 text-lg md:text-base mb-4 md:mb-0 font-medium text-gray-800 hover:text-gray-500">
+                <Popover.Button className="flex justify-between items-center w-full py-2 text-lg mt-2 md:mt-0 font-medium text-gray-800 hover:text-gray-500">
                   {blok.title}
                   <span>{open ? <IoMdArrowDropup className="text-lg" /> : <IoMdArrowDropdown className="text-lg" />}</span>
                 </Popover.Button>
@@ -68,13 +68,13 @@ const Menus = ({ blok }) => {
                 >
                   <Popover.Panel
                     static
-                    className="flex flex-col mt-2 space-y-2"
+                    className="flex flex-col mb-2 bg-slate-100 pl-3 pt-3 rounded-sm"
                   >
                     {blok?.submenus.map((subItem) => (
                       <Link
                         key={subItem._uid}
                         href="/"
-                        className="text-lg md:text-base mb-4 md:mb-0 font-medium text-gray-800 hover:text-gray-500"
+                        className="text-lg md:text-base mb-2 md:mb-0 font-medium text-gray-800 hover:text-gray-500"
                         onClick={() => setMenuOpen(false)}
                       >
                         {subItem.text}

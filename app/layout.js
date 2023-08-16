@@ -3,6 +3,8 @@ import StoryblokProvider from "@/components/StoryblokProvider";
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Config from "@/components/Config";
+import Navigation from "@/components/Navigation";
+import Header from "@/components/Header";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -21,12 +23,14 @@ storyblokInit({
   use: [apiPlugin],
 });
 
+
+
 export default function RootLayout({ children }) {
   return (
     <StoryblokProvider>
       <html lang="en" className={`${montserrat.variable}`}>
         <body>
-          <Config/> 
+          <Header/>
           <main>{children}</main>
         </body>
       </html>

@@ -26,7 +26,9 @@ html {
     font-size: 16px;
     overflow-x: hidden
 }
-
+body {
+    overflow-x: hidden
+}
 .content p {
     @apply mb-5;
 }
@@ -139,14 +141,12 @@ html {
 
 .table-content h1.splash,
 .table-content h2.splash-h2 {
-
     color: #FFFFFF;
     text-transform: uppercase;
     line-height: 1.2;
 }
 
 @media screen and (min-width:1300px) {
-
     .table-content h1.splash,
     .table-content h2.splash-h2 {
         line-height: 1.08;
@@ -207,6 +207,35 @@ h2 .rank-no-1 {
 
     h2 .rank-no-1 {
         font-size: calc(var(--font-heading-scale) * 6.35rem);
+    }
+}
+
+@media screen and (max-width:540px) {
+
+    h1 .your,
+    h1 .local {
+        font-size: calc(var(--font-heading-scale) * 12vw);
+    }
+
+    h1 .local {
+        text-decoration-line: underline;
+        text-decoration-color: #fcd832;
+    }
+
+    h1 .las-vegas {
+        font-size: calc(var(--font-heading-scale) * 13.5vw);
+    }
+
+    h1 .seo-experts {
+        font-size: calc(var(--font-heading-scale) * 11.25vw);
+    }
+
+    h2 .we-help-you {
+        font-size: calc(var(--font-heading-scale) *10.5vw);
+    }
+
+    h2 .rank-no-1 {
+        font-size: calc(var(--font-heading-scale) * 13vw);
     }
 }
 

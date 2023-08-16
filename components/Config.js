@@ -1,14 +1,9 @@
 "use client";
 import Link from "next/link";
-import { Popover, Transition } from "@headlessui/react";
+import { Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
 import { StoryblokComponent, getStoryblokApi } from "@storyblok/react";
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  // Add other navigation links here...
-];
 
 const Config = ({ blok }) => {
   const [menuOpen, setMenuOpen] = useState(false);

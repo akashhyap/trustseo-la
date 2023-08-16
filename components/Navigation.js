@@ -1,26 +1,24 @@
 "use client";
 import Link from "next/link";
-import { Menu } from "@headlessui/react";
-import { Popover, Transition } from "@headlessui/react";
+import { Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+import { StoryblokComponent } from "@storyblok/react";
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  // Add other navigation links here...
-];
-
-const Navigation = () => {
+const Navigation = ({config}) => {
+  // console.log("nav", config);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="relative bg-white">
       <div className="md:max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center border-b-2 border-gray-100 py-3 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
-              <span className="sr-only">Your Logo</span>
-              {/* You can replace this with your Logo */}
-              Logo
+              <span className="sr-only">TrustSEO</span>
+              {config?.content?.logo && <img
+                src={config?.content?.logo?.filename}
+                alt="TrustSEO"
+                className="h-full object-cover basis-20 w-[80px]"
+              />}
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -49,14 +47,8 @@ const Navigation = () => {
             </button>
           </div>
           <nav className="hidden md:flex space-x-10">
-            {navigation.map((item) => (
-              <Link
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
-                key={item.name}
-                href={item.href}
-              >
-                {item.name}
-              </Link>
+            {config?.content?.headerMenu?.map((nestedBlok) => (
+              <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
             ))}
           </nav>
         </div>
@@ -77,7 +69,7 @@ const Navigation = () => {
           onClick={() => setMenuOpen(false)}
         ></div>
       </Transition>
-      
+
       {/* Mobile menu */}
       <Transition
         show={menuOpen}
@@ -94,8 +86,12 @@ const Navigation = () => {
             <div className="px-5 pt-4 flex items-center justify-between">
               <div>
                 <Link href="/">
-                  <span className="sr-only">Your Logo</span>
-                  Logo
+                  <span className="sr-only">TrustSEO</span>
+                  <img
+                    src={config?.content?.logo?.filename}
+                    alt="TrustSEO"
+                    className="h-full object-cover basis-20 w-[80px]"
+                  />
                 </Link>
               </div>
               <div className="-mr-2">
@@ -124,16 +120,9 @@ const Navigation = () => {
                 </button>
               </div>
             </div>
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-base font-medium text-gray-500 hover:text-gray-900 block px-3 py-2 rounded-md"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
+            <div className="px-4 pt-2 pb-3 mt-5 sm:px-3 flex flex-col">
+              {config?.content?.headerMenu?.map((nestedBlok) => (
+                <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
               ))}
             </div>
           </div>
