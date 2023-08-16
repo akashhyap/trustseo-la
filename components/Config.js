@@ -20,7 +20,7 @@ const Config = ({ blok }) => {
       const { data } = await storyblokApi.get("cdn/stories/config");
       const headerMenu = data?.story?.content;
       setMenu(headerMenu);
-      console.log("headerMenu", headerMenu);
+      // console.log("headerMenu", headerMenu);
     };
     getConfig();
   }, []);
@@ -32,11 +32,11 @@ const Config = ({ blok }) => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
               <span className="sr-only">TrustSEO</span>
-              <img
+              {menu?.logo && <img
                 src={menu?.logo?.filename}
                 alt="TrustSEO"
                 className="h-full object-cover basis-20 w-[80px]"
-              />
+              />}
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
