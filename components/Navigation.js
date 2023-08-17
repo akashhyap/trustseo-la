@@ -4,7 +4,7 @@ import { Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { StoryblokComponent } from "@storyblok/react";
 
-const Navigation = ({config}) => {
+const Navigation = ({ config }) => {
   // console.log("nav", config);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -14,11 +14,13 @@ const Navigation = ({config}) => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
               <span className="sr-only">TrustSEO</span>
-              {config?.content?.logo && <img
-                src={config?.content?.logo?.filename}
-                alt="TrustSEO"
-                className="h-full object-cover basis-20 w-[80px]"
-              />}
+              {config?.content?.logo && (
+                <img
+                  src={config?.content?.logo?.filename}
+                  alt="TrustSEO"
+                  className="h-full object-cover basis-20 w-[80px]"
+                />
+              )}
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -46,10 +48,17 @@ const Navigation = ({config}) => {
               </svg>
             </button>
           </div>
-          <nav className="hidden md:flex space-x-10">
-            {config?.content?.headerMenu?.map((nestedBlok) => (
-              <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} closeMenu={() => setMenuOpen(false)}/>
-            ))}
+          <nav className="hidden md:flex space-x-8">
+            {config?.content?.menu?.map(
+              (nestedBlok) =>
+                nestedBlok.component === "headerMenu" && (
+                  <StoryblokComponent
+                    blok={nestedBlok}
+                    key={nestedBlok._uid}
+                    closeMenu={() => setMenuOpen(false)}
+                  />
+                )
+            )}
           </nav>
         </div>
       </div>
@@ -121,8 +130,12 @@ const Navigation = ({config}) => {
               </div>
             </div>
             <div className="px-4 pt-2 pb-3 mt-5 sm:px-3 flex flex-col">
-              {config?.content?.headerMenu?.map((nestedBlok) => (
-                <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} closeMenu={() => setMenuOpen(false)} />
+              {config?.content?.menu?.map((nestedBlok) => (
+                <StoryblokComponent
+                  blok={nestedBlok}
+                  key={nestedBlok._uid}
+                  closeMenu={() => setMenuOpen(false)}
+                />
               ))}
             </div>
           </div>

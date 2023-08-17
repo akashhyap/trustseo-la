@@ -4,8 +4,10 @@ import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 
 /** 2. Import your components */
 import Config from "./Config";
+import HeaderMenu from "./HeaderMenu";
 import Menus from "./Menus";
 import Submenu from "./Submenu";
+import BottomMenu from "./BottomMenu";
 import FooterMenu from "./FooterMenu";
 import Page from "./Page";
 import Teaser from "./Teaser";
@@ -36,8 +38,10 @@ storyblokInit({
   use: [apiPlugin],
   components: {
     config: Config,
+    headerMenu: HeaderMenu,
     menu: Menus,
     submenu: Submenu,
+    bottomMenu: BottomMenu,
     footerMenu: FooterMenu,
     teaser: Teaser,
     page: Page,

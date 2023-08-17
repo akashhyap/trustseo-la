@@ -1,6 +1,5 @@
 "use client";
 import { StoryblokComponent } from "@storyblok/react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   BiLogoFacebookSquare,
@@ -48,9 +47,19 @@ const Footer = ({ config }) => {
       </div>
       <div className="max-w-6xl mx-auto border-t border-gray-300 mt-5 pt-5">
         <ul className="flex flex-wrap text-sm footerMenu">
-          {config?.content?.footer?.map((nestedBlok) => (
-            <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
-          ))}
+          {config?.content?.menu?.map(
+            (nestedBlok) => {
+              console.log(nestedBlok);
+              return (
+                nestedBlok.component === "bottomMenu" && (
+                  <StoryblokComponent
+                    blok={nestedBlok}
+                    key={nestedBlok._uid}
+                   />
+                )
+              )
+            }  
+          )}
         </ul>
       </div>
     </div>
