@@ -9,6 +9,7 @@ import {
 } from "react-icons/bi";
 
 const Footer = ({ config }) => {
+  console.log("footer config", config);
   return (
     <div className="bg-gray-200 py-8">
       <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center">
