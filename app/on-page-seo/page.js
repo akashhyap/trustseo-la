@@ -7,7 +7,7 @@ const PageSeo = async () => {
   const story = await getOnPageSeo();
   return (
     <div className="max-w-6xl mx-auto">
-      <OnPageSeo blok={story} />;
+      <OnPageSeo blok={story} />
     </div>
   );
 };
