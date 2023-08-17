@@ -373,3 +373,15 @@ h2 .rank-no-1 {
 .cta:hover {
     @apply bg-white text-[#f16232];
 }
+.footerMenu li{
+ position: relative;
+}
+.footerMenu li:after {
+    content: "|";
+    display: inline-block;
+    margin: 0 9px;
+    opacity: .5;
+}
+.footerMenu li:last-child::after {
+    display: none;
+}

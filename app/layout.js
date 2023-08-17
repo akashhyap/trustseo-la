@@ -2,9 +2,8 @@ import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokProvider from "@/components/StoryblokProvider";
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
-import Config from "@/components/Config";
-import Navigation from "@/components/Navigation";
 import Header from "@/components/Header";
+import FooterMenuWrapper from "@/components/FooterMenuWrapper";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -23,8 +22,6 @@ storyblokInit({
   use: [apiPlugin],
 });
 
-
-
 export default function RootLayout({ children }) {
   return (
     <StoryblokProvider>
@@ -32,6 +29,7 @@ export default function RootLayout({ children }) {
         <body>
           <Header/>
           <main>{children}</main>
+          <FooterMenuWrapper/>
         </body>
       </html>
     </StoryblokProvider>

@@ -6,6 +6,7 @@ import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import Config from "./Config";
 import Menus from "./Menus";
 import Submenu from "./Submenu";
+import FooterMenu from "./FooterMenu";
 import Page from "./Page";
 import Teaser from "./Teaser";
 import Grid from "./Grid";
@@ -37,6 +38,7 @@ storyblokInit({
     config: Config,
     menu: Menus,
     submenu: Submenu,
+    footerMenu: FooterMenu,
     teaser: Teaser,
     page: Page,
     grid: Grid,
