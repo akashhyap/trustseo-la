@@ -27,3 +27,14 @@ export async function getConfig() {
   const config = data ? data.story : null;
   return config;
 }
+
+export async function getOnPageSeo() {
+  if (!storyblokApi) {
+    return;
+  }
+  const { data } = await storyblokApi.get(`cdn/stories/`, {
+    starts_with: "on-page-seo/",
+  });
+  const onpageseo = data.stories;
+  return onpageseo;
+}

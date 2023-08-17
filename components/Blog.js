@@ -13,7 +13,8 @@ const Blog = ({ blok }) => {
   const blogAside = blok.body.filter((item) => item.component === "aside");
 
   const bodyContent = blok.body.filter(
-    (item) => item.component !== "blogAlertContent" && item.component !== "aside"
+    (item) =>
+      item.component !== "blogAlertContent" && item.component !== "aside"
   );
 
   // console.log("blogAlert", blogAlert);
@@ -26,8 +27,14 @@ const Blog = ({ blok }) => {
         <h1 className="text-4xl tracking-tight font-semibold mb-10">
           {blok?.title}
         </h1>
-        <div className="relative h-[415px] mb-10">
-          <BannerImage blok={blok} />
+        <div className="relative h-[415px] mb-10 01">
+          {blok?.heroImage?.filename && (
+            <img
+              className="w-full h-full object-cover object-center rounded-lg"
+              alt={blok?.heroImage?.alt}
+              src={`${blok?.heroImage?.filename}/m/`}
+            />
+          )}
         </div>
         {bodyContent?.map((nestedBlok) => (
           <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
