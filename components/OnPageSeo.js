@@ -17,7 +17,7 @@ const OnPageSeo = ({ blok }) => {
   }, []);
   return (
     <div
-      className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3 md:px-0"
+      className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3 md:px-0 py-10 px-6 xl:px-0"
       {...storyblokEditable(blok)}
     >
       {articles[0] &&

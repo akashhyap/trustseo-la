@@ -15,13 +15,13 @@ export default async function Page({ params }) {
   return (
     <>
       {story.content.component === "page" ? (
-        <main className="max-w-6xl mx-auto">
+        <section className="max-w-6xl mx-auto">
          <StoryComponent blok={story.content} />
-        </main>
+        </section>
       ) : (
-        <main>
+        <section>
            <StoryComponent blok={story.content} />
-        </main>
+        </section>
       )}
     </>
   );

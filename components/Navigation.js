@@ -8,9 +8,9 @@ const Navigation = ({config}) => {
   // console.log("nav", config);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-white border-b border-gray-200">
       <div className="md:max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center border-b-2 border-gray-100 py-3 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
               <span className="sr-only">TrustSEO</span>
