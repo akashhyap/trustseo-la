@@ -3,7 +3,6 @@
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 
 /** 2. Import your components */
-import Config from "./Config";
 import HeaderMenu from "./HeaderMenu";
 import Menus from "./Menus";
 import Submenu from "./Submenu";
@@ -37,7 +36,6 @@ storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,
   use: [apiPlugin],
   components: {
-    config: Config,
     headerMenu: HeaderMenu,
     menu: Menus,
     submenu: Submenu,

@@ -1,8 +1,8 @@
 "use client";
-import Link from "next/link";
-import { Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+import Link from "next/link";
 import { StoryblokComponent } from "@storyblok/react";
+import { Transition } from "@headlessui/react";
 
 const Navigation = ({ config }) => {
   console.log("nav", config);
