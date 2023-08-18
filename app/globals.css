@@ -23,11 +23,7 @@
 
 html {
     font-family: var(--font-montserrat), sans-serif;
-    font-size: 16px;
-    overflow-x: hidden
-}
-body {
-    overflow-x: hidden
+    font-size: 18px;
 }
 .content p {
     @apply mb-5;
@@ -67,7 +63,7 @@ body {
 }
 
 .imageTextSplit {
-    @apply lg:flex lg:items-center lg:space-x-10 py-12;
+    @apply lg:flex lg:items-center lg:gap-10 py-12;
 }
 
 .imageTextSplit .figure,
@@ -368,7 +364,7 @@ h2 .rank-no-1 {
     width: 80px;
 }
 .cta {
-    @apply h-[50px] px-[30px] bg-[#f16232] border border-[#f16232] min-w-[130px] text-white text-sm uppercase font-bold;
+    @apply h-[50px] px-[30px] bg-[#f16232] border border-[#f16232] min-w-[130px] text-white text-xs uppercase font-bold;
 }
 .cta:hover {
     @apply bg-white text-[#f16232];

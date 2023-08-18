@@ -5,7 +5,7 @@ import { Fragment, useState } from "react";
 import { StoryblokComponent } from "@storyblok/react";
 
 const Navigation = ({ config }) => {
-  // console.log("nav", config);
+  console.log("nav", config);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="relative bg-white border-b border-gray-200">

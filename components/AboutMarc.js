@@ -10,7 +10,7 @@ const AboutMarc = ({blok}) => {
         <BannerImage blok={blok} />
       </div>
       <div className="px-9 py-8">
-        <div className="aboutMarcTitle text-2xl mb-5">{render(blok.title)}</div>
+        <div className="aboutMarcTitle text-xl mb-5">{render(blok.title)}</div>
         <div className="aboutMarcText leading-7 text-sm text-[#707378]">{render(blok.text)}</div>
       </div>
     </div>
