@@ -10,7 +10,7 @@ import {
 const Footer = ({ config }) => {
   // console.log("footer config", config);
   return (
-    <div className="bg-gray-200 py-8">
+    <footer className="bg-gray-200 py-8 px-10 lg:px-0">
       <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center">
         <div className="relative flex items-center gap-3">
           <div className="flex lg:flex-1">
@@ -31,7 +31,7 @@ const Footer = ({ config }) => {
           </p>
         </div>
         <div className="socialMedia flex flex-wrap">
-          <p className="text-sm mr-5">Follow me around the web</p>
+          <p className="text-sm mr-5 pt-5 pb-3 md:pt-0 md:pb-0">Follow me around the web</p>
           <ul className="flex gap-3">
             <li>
               <BiLogoTwitter className="text-2xl" />
@@ -47,9 +47,16 @@ const Footer = ({ config }) => {
       </div>
       <div className="max-w-6xl mx-auto border-t border-gray-300 mt-5 pt-5">
         <ul className="flex flex-wrap text-sm footerMenu">
-          {config?.content?.menu?.map(
+          {config?.content?.menu[1]?.body.map((nestedBlok) => (
+            <li key={nestedBlok._uid}>
+              <Link href={`/${nestedBlok.link.cached_url}`}>
+                {nestedBlok.text}
+              </Link>
+            </li>
+          ))}
+          {/* {config?.content?.menu?.map(
             (nestedBlok) => {
-              console.log("nestedBlok",nestedBlok);
+              // console.log("nestedBlok",nestedBlok);
               return (
                 nestedBlok.component === "bottomMenu" && (
                   <StoryblokComponent
@@ -59,10 +66,10 @@ const Footer = ({ config }) => {
                 )
               )
             }  
-          )}
+          )} */}
         </ul>
       </div>
-    </div>
+    </footer>
   );
 };
 

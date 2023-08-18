@@ -1,7 +1,7 @@
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react/rsc";
 
 const BottomMenu = ({ blok }) => {
-  console.log("blok", blok);
+  // console.log("blok", blok);
   return (
     <>
       {blok.body.map((nestedBlok) => (
