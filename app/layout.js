@@ -20,6 +20,10 @@ export const metadata = {
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,
   use: [apiPlugin],
+  cache: {
+    clear: "auto",
+    type: "memory",
+  },
 });
 
 export default function RootLayout({ children }) {
